@@ -61,7 +61,6 @@ This project was developed for learning and practicing front-end web development
 
 **S Afreed**
 
-GitHub: https://github.com/your-username
 
 ---
 
