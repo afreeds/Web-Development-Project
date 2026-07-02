@@ -1,0 +1,900 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* Top Bar */
+.top {
+  background: orange;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.scroll-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 12s linear infinite;
+  font-weight: bold;
+  color: black;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.top-bar {
+    background-color: #0b2c4a; /* dark blue */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 50px;
+    font-size: 14px;
+}
+
+/* Left section */
+.top-bar .left {
+    display: flex;
+    gap: 30px;
+}
+
+.top-bar .left p {
+    margin: 0;
+}
+
+/* Right section */
+.top-bar .right ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+.top-bar .right ul li a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: white;
+    color: #0b2c4a;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+/* Contact links */
+.contact-link {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* 🔥 Hover effect */
+.contact-link:hover {
+    color: orange;
+}
+/* Hover effect */
+.top-bar .right ul li a:hover {
+    background: orange;
+    color: black;
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #799b97; /* Dark Greenish color from video */
+    padding: 15px 50px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    padding: 0 10px;
+    position: relative;
+}
+/* NAV LINKS BASE */
+.nav-links li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* 🔥 HOVER EFFECT (MAIN REQUIREMENT) */
+.nav-links li a:hover {
+    background-color: white;   /* white box */
+    color: #2e8b57;            /* green text */
+}
+
+/* OPTIONAL: keep active tab highlighted */
+.nav-links li a.active {
+    background-color: white;
+    color: #2e8b57;
+}
+.nav-links a {
+    color: rgb(4, 4, 4);
+    text-decoration: none;
+    font-weight: bold;
+}
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2e8b57; /* green tone */
+}
+/* Dropdown Logic */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown-content li a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li:hover {
+    background-color: #ddd;
+}
+
+.enquiry-btn {
+    background-color: #fff;
+    color: #2d5a4c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* SLIDER */
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: slide 12s infinite;
+}
+
+/* IMAGES */
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+
+}
+
+/* ✅ FIXED ANIMATION (pause on each image) */
+@keyframes slide {
+
+    /* First Image */
+    0%   { transform: translateX(0%); }
+    20%  { transform: translateX(0%); }
+
+    /* Second Image */
+    25%  { transform: translateX(-100%); }
+    45%  { transform: translateX(-100%); }
+
+    /* Third Image */
+    50%  { transform: translateX(-200%); }
+    70%  { transform: translateX(-200%); }
+
+    /* Back to First */
+    75%  { transform: translateX(0%); }
+    100% { transform: translateX(0%); }
+}
+
+/* TEXT */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+}
+
+/* DARK OVERLAY */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+/* Features Section */
+.features {
+    width: 100%;
+    padding: 80px 60px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: gray;
+    margin-bottom: 40px;
+}
+
+.features {
+    width: 100%;
+    padding: 80px 60px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ALL cards same green */
+.feature-box {
+    flex: 1;
+    min-width: 220px;
+    background: #1abc9c;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* 🔥 Hover → turns WHITE */
+.feature-box:hover {
+    background: #ffffff;
+    color: black;
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Icon */
+.feature-box .icon {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e6f0f0;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+/* Icon color change on hover */
+.feature-box:hover .icon {
+    background: #1abc9c;
+    color: white;
+}
+
+/*course section*/
+.courses {
+    width: 100%;
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    gap: 30px;
+    max-width: 1200px;  /* important */
+    margin: auto;
+}
+
+.course-box {
+    width: 100%; /* full grid width */
+    background: white;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.course-box h3 {
+    background: #1abc9c;
+    color: white;
+    padding: 10px;
+    margin: -20px -20px 10px -20px;
+}
+
+.course-box .desc {
+    font-weight: bold;
+}
+
+.course-box .stars {
+    color: gold;
+    margin: 10px 0;
+}
+
+.course-box button {
+    background: #1abc9c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.course-box button:hover {
+    background: #16a085;
+}
+.apply-btn {
+    display: inline-block;
+    background: #1abc9c;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.apply-btn:hover {
+    background: #16a085;
+}
+
+        /* Footer Styles */
+footer {
+    background-color: #0b2c4a;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 30px 30px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-section h3 {
+    color: orange;
+    font-size: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: orange;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    padding: 8px 0;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.footer-section ul li:hover {
+    color: orange;
+    padding-left: 5px;
+}
+
+.footer-section address {
+    line-height: 1.8;
+    color: #ccc;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.office-time {
+    margin-top: 15px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.office-time strong {
+    color: orange;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subscribe-form input {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.subscribe-form button {
+    background: orange;
+    color: #0b2c4a;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.subscribe-form button:hover {
+    background: #ffaa33;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .subscribe-form {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+        /* Course Container */
+       
+        /* View Batches Button Special Style */
+        .view-batches-btn {
+            background: #3498db !important;
+        }
+
+        .view-batches-btn:hover {
+            background: #2980b9 !important;
+        }
+
+        /* Collapsible Section Styles - Pure CSS */
+        .collapsible-section {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .collapsible-header {
+            background: orange;
+            padding: 18px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .collapsible-header:hover {
+            background: #ff8c00;
+        }
+
+        .collapsible-header h2 {
+            color: white;
+            font-size: 20px;
+            margin: 0;
+            display: inline-block;
+            border: none;
+            padding: 0;
+        }
+
+        .toggle-icon {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Hide checkbox */
+        .collapsible-toggle {
+            display: none;
+        }
+
+        /* Content - hidden by default */
+        .collapsible-content {
+            max-height: 0;
+            overflow-y: auto;
+            transition: max-height 0.4s ease-out;
+            background: white;
+        }
+
+        /* When checkbox is checked, show content with scrollbar */
+        .collapsible-toggle:checked + .collapsible-header + .collapsible-content {
+            max-height: 400px;
+            overflow-y: auto;
+            transition: max-height 0.6s ease-in;
+        }
+
+        /* Custom scrollbar */
+        .collapsible-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .collapsible-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .collapsible-content::-webkit-scrollbar-thumb {
+            background: orange;
+            border-radius: 10px;
+        }
+
+        .collapsible-content::-webkit-scrollbar-thumb:hover {
+            background: #ff8c00;
+        }
+
+        .content-inner {
+            padding: 25px;
+        }
+
+        /* List Styles */
+        .info-list, .learn-list, .tech-detail-list {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .info-list li, .learn-list li, .tech-detail-list li {
+            padding: 10px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .info-list li:before {
+            content: "•";
+            color: #1abc9c;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .learn-list li:before {
+            content: "⭐";
+            color: orange;
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+
+        .tech-detail-list li:before {
+            content: "★";
+            color: #1abc9c;
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+
+        /* Change icon when checkbox is checked */
+        .collapsible-toggle:checked + .collapsible-header .toggle-icon::before {
+            content: "−";
+        }
+
+        .toggle-icon::before {
+            content: "+";
+        }
+
+        
+         .course-containers {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Course Header */
+        .course-headers {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .course-headers h1 {
+            font-size: 32px;
+            color: #2c5f5a;
+            margin-bottom: 25px;
+        }
+
+        .course-buttonss {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .enroll-btn {
+            background: orange;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .enroll-btn:hover {
+            background: #ff8c00;
+        }
+
+        .course-buttonss button:not(.enroll-btn) {
+            background: #1abc9c;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .course-buttonss button:not(.enroll-btn):hover {
+            background: #16a085;
+        }
+
+        /* View Batches Button Special Style */
+        .view-batches-btn {
+            background: #3498db !important;
+        }
+
+        .view-batches-btn:hover {
+            background: #2980b9 !important;
+        }
+
+        /* Section Styles - No Collapse */
+        .info-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .info-section h2 {
+            color: #2c5f5a;
+            font-size: 26px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid orange;
+            display: inline-block;
+        }
+
+        .learn-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .learn-section h2 {
+            color: #2c5f5a;
+            font-size: 26px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid orange;
+            display: inline-block;
+        }
+
+        /* List Styles */
+        .info-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .info-list li {
+            padding: 10px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .info-list li:before {
+            content: "•";
+            color: #1abc9c;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .learn-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .learn-list li {
+            padding: 10px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .learn-list li:before {
+            content: "⭐";
+            color: orange;
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            .course-headers h1 {
+                font-size: 28px;
+            }
+            
+            .collapsible-header h2 {
+                font-size: 18px;
+            }
+            
+            .course-buttonss {
+                flex-direction: column;
+            }
+            
+            .course-buttonss button {
+                width: 100%;
+            }
+        }
+ 
+/* Hidden by default */
+/* Background overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* Show popup */
+.modal:target {
+    display: block;
+}
+
+/* Form box */
+.modal-content {
+    background: white;
+    width: 350px;
+    margin: 120px auto;
+    padding: 25px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Heading */
+.form-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+/* Button */
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background: #1abc9c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background: #16a085;
+}
+/* Heading style */
+.form-title {
+    font-size: 20px;
+    text-align: center;
+    color: #2c5f5a;
+    margin-bottom: 15px;
+}

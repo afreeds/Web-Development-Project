@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apply Online</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* LEFT SIDE */
+        .left {
+            width: 40%;
+            background: #cfc3d9;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left h1 {
+            font-size: 40px;
+            margin: 10px 0;
+        }
+
+        .left p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* RIGHT SIDE */
+        .right {
+            width: 60%;
+            background: white;
+            padding: 40px;
+        }
+
+        .right h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        .btns {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .reset {
+            background: #eee;
+        }
+
+        .submit {
+            background: #1abc9c;
+            color: white;
+        }
+
+        .submit:hover {
+            background: #16a085;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <h3>RJ Technology</h3>
+        <h1>M.VERVE</h1>
+        <p>Inspired Applications</p>
+        <p>To connect with us please enter the details</p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+        <h2>Create an account</h2>
+<form>
+        <div class="form-row">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="number" placeholder="Age" required>
+        </div>
+
+        <div class="form-row">
+            <input type="text" placeholder="Mobile Number" required>
+            <input type="email" placeholder="Email" required>
+        </div>
+
+        <div class="form-row">
+            <textarea placeholder="Description (Max 150 characters)" required></textarea>
+        </div>
+
+        <div class="form-row">
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+        </div>
+
+        <div class="btns">
+            <button class="reset">RESET</button>
+            <button type="submit" class = "submit">SUBMIT</button>
+        </div>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
